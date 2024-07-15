@@ -1,0 +1,63 @@
+{
+  "name": "@poolzfinance/api4",
+  "version": "1.11.30",
+  "description": "Bridge between front and back",
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Poolz/InterfaceAPI4.git"
+  },
+  "scripts": {
+    "prebuild": "pnpm clean",
+    "build": "pnpm prebuild && microbundle --jsx React.createElement",
+    "clean": "rm -rf dist",
+    "compile": "rimraf src/types/graphql && graphql-codegen",
+    "test": "jest"
+  },
+  "author": "Poolz team",
+  "license": "MIT",
+  "prettier": {
+    "printWidth": 140,
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "useTabs": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "bracketSameLine": true
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^4.0.1",
+    "@graphql-codegen/client-preset": "^4.0.1",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@types/crypto-js": "^4.2.2",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/react": "^18.2.14",
+    "jest": "^29.5.0",
+    "microbundle": "^0.15.1",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.16",
+    "crypto-js": "^4.2.0",
+    "graphql": "^16.7.1",
+    "react": "^18.2.0"
+  }
+}

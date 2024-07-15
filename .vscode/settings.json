@@ -1,0 +1,6 @@
+{
+  "sonarlint.connectedMode.project": {
+    "connectionId": "the-poolz",
+    "projectKey": "The-Poolz_InterfaceAPI4"
+  }
+}
